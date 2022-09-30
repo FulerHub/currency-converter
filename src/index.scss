@@ -1,0 +1,133 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.preloader{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d0d1cf;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    &:nth-child(2) {
+      animation-delay: -0.5s;
+    }
+  }
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+
+.container{
+  margin:0 auto;
+  max-width: 1070px;
+  width: 100%;
+}
+
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1{
+  font-size: 52px;
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__h1{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+.currency-list{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  &__item{
+    margin: 15px !important;
+    box-shadow: 1px 3px 11px #e3e3e3;
+  }
+}
+
+.converter{
+  display: flex;
+  justify-content: center;
+}
+
+
+.wrap-block{
+  position: relative;
+  display: flex;
+  padding: 25px 15px;
+  border:1px solid #cacbc9;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 15px;
+  &__title{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: #fff;
+    font-weight: 600;
+    color:#333
+  }
+}
